@@ -1,5 +1,6 @@
 # Coding Convention
 
+
 ## HTML
 
 1. **문서 구조**
@@ -18,6 +19,7 @@
 
 4. **주석**
    - `<!-- 주석 내용 -->` 사용
+
 
 ## CSS
 
@@ -43,6 +45,7 @@
 
 7. **색상 사용**
    - HEX 코드, RGBA, CSS Variables 사용
+
 
 ## Javascript
 
@@ -85,6 +88,7 @@
 
 9. **에러 처리**
    - **try-catch 사용**: 오류가 발생할 가능성이 있는 코드 블록에 사용
+
 
 ## Comment: Jaavascript
 
@@ -149,3 +153,113 @@
    }
    ```
 
+
+## Comment: HTML
+
+1. **파일 주석**
+   - 파일의 목적, 작성자, 생성일 등을 파일 상단에 기록
+   ```html
+   <!-- 
+     파일명: index.html
+     작성자: 홍길동
+     생성일: 2024-06-16
+     설명: 이 파일은 메인 페이지의 구조를 정의합니다.
+   -->
+   ```
+
+2. **섹션 주석**
+   - 주요 섹션을 구분하기 위해 섹션 상단에 주석 추가
+   ```html
+   <!-- Header section starts -->
+   <header>
+     <h1>My Website</h1>
+   </header>
+   <!-- Header section ends -->
+   ```
+
+3. **블록 주석**
+   - 특정 블록의 목적을 설명하기 위해 주석 추가
+   ```html
+   <!-- Main content starts -->
+   <main>
+     <section id="home">
+       <h2>Welcome to My Website</h2>
+       <p>This is the home section.</p>
+     </section>
+   </main>
+   <!-- Main content ends -->
+   ```
+
+4. **인라인 주석**
+   - 특정 코드 라인의 목적이나 기능을 설명하기 위해 주석 추가
+   ```html
+   <img src="image.jpg" alt="Example Image" /> <!-- Example image for the home section -->
+   ```
+
+5. **TODO 주석**
+   - 추후 수정이나 추가할 작업을 기록
+   ```html
+   <!-- TODO: Add more sections to the main content -->
+   <main>
+     <section id="home">
+       <h2>Welcome to My Website</h2>
+       <p>This is the home section.</p>
+     </section>
+   </main>
+   ```
+
+## Comment: CSS
+
+1. **주석 기본 형태**
+   - 단일 행 주석: `/* This is a single-line comment */`
+   - 다중 행 주석: 
+     ```css
+     /*
+       This is a multi-line comment
+       You can use it to explain more complex logic or sections
+     */
+     ```
+
+2. **주석 용도**
+
+   **1. 섹션 주석**
+   - 파일을 주요 섹션으로 나누어 각 섹션의 시작 부분에 주석 추가
+     ```css
+     /* ==========================================================================
+        Base Styles
+        ========================================================================== */
+     ```
+
+   **2. 블록 주석**
+   - 특정 스타일 블록의 목적이나 기능을 설명하는 주석
+     ```css
+     /* Primary Button Styles */
+     .button-primary {
+       background-color: #007bff;
+       color: white;
+       border: none;
+       padding: 10px 20px;
+       cursor: pointer;
+     }
+     ```
+
+   **3. 인라인 주석**
+   - 특정 속성의 목적이나 기능을 설명하기 위해 인라인으로 작성하는 주석
+     ```css
+     .button-primary {
+       background-color: #007bff; /* Main button color */
+       color: white; /* Text color */
+       border: none; /* Remove border */
+     }
+     ```
+
+   **4. TODO 주석**
+   - 추후 수정하거나 추가해야 할 작업을 기록
+     ```css
+     /* TODO: Add responsive styles for mobile */
+     @media (max-width: 600px) {
+       .button-primary {
+         width: 100%;
+       }
+     }
+     ```
