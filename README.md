@@ -5,7 +5,7 @@
 2. [CSS](#css)
 3. [Javascript](#javascript)
 4. [Python](#python)
-   
+5. [C++](#c-plus-plus)   
 
 ## HTML
 
@@ -665,3 +665,86 @@ def fetch_data(path: str) -> dict:
 - **간결성**: 불필요한 내용을 피하고 간결하게 작성합니다.
 - **관련성**: 주석은 관련된 코드 블록에 대한 설명만 포함해야 합니다.
 - **업데이트**: 코드가 변경될 때마다 주석도 함께 업데이트해야 합니다.
+
+
+## C Plus Plus
+
+1. **파일 조직 및 네이밍**
+   - 파일 이름: 소문자와 언더스코어(`_`) 사용. 예: `my_class.cpp`, `my_class.h`
+   - 클래스 이름: CamelCase 사용. 예: `MyClass`
+
+2. **인덴테이션 및 공백**
+   - 인덴테이션: 공백 4칸 또는 탭 1칸
+   - 연산자 양쪽에 공백. 예: `a + b`
+
+3. **네이밍 컨벤션**
+   - 변수: 소문자와 언더스코어. 예: `my_variable`
+   - 상수: 대문자와 언더스코어. 예: `MY_CONSTANT`
+   - 함수: CamelCase 사용. 예: `MyFunction`
+
+4. **함수**
+   - 길이: 20~30줄 이하
+   - 이름: 명확한 동사로 시작. 예: `CalculateTotal()`
+   - 매개변수: 적게 유지, 필요시 구조체나 클래스 사용
+
+5. **클래스**
+   - 멤버 변수: `m_` 접두사 사용. 예: `m_variable`
+   - 접근 지정자: `public`, `protected`, `private` 순서로 작성
+
+6. **포인터와 레퍼런스**
+   - 포인터: `int* ptr`
+   - 레퍼런스: `int& ref`
+   - 스마트 포인터 사용 권장
+
+7. **조건문과 루프**
+   - 중괄호 항상 사용. 예: `if (condition) { // code }`
+
+8. **에러 처리**
+   - 표준 예외 클래스 사용, 필요시 사용자 정의 예외 클래스 작성
+
+## Comment: C Plus Plus
+
+1. **파일 주석**
+   ```cpp
+   /**
+    * @file filename.h
+    * @brief Brief description.
+    * @author Author Name
+    * @date YYYY-MM-DD
+    */
+   ```
+
+2. **클래스 주석**
+   ```cpp
+   /**
+    * @class ClassName
+    * @brief Brief description.
+    */
+   ```
+
+3. **함수 주석**
+   ```cpp
+   /**
+    * @brief Brief description.
+    * @param[in] param Description.
+    * @return Description.
+    */
+   ```
+
+4. **멤버 변수 주석**
+   ```cpp
+   /**
+    * @brief Description of the member variable.
+    */
+   int m_memberVariable;
+   ```
+
+5. **인라인 주석**
+   ```cpp
+   int value = 42;  // Initialize value
+   ```
+
+6. **TODO 주석**
+   ```cpp
+   // TODO: Implement this function.
+   ```
