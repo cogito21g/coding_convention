@@ -2,6 +2,9 @@
 
 ## Index
 1. [HTML](#html)
+2. [CSS](#css)
+3. [Javascript](#javascript)
+   
 
 ## HTML
 
@@ -415,3 +418,131 @@ Resolves: #456
 - **코드 스타일 가이드 준수**: eslint, prettier 사용
 - **주기적인 회고**: 스프린트 회고, 피드백 문화
 - **지식 공유**: 위키/노션 운영, 기술 세미나
+
+
+## Git
+
+#### 1. Git 설치 및 설정
+- **설치**: [Git 공식 사이트](https://git-scm.com/)에서 다운로드
+- **설정**:
+  ```bash
+  git config --global user.name "Your Name"
+  git config --global user.email "your.email@example.com"
+  ```
+
+#### 2. Git 저장소 초기화 및 클론
+- **저장소 초기화**:
+  ```bash
+  git init
+  ```
+- **저장소 클론**:
+  ```bash
+  git clone <repository_url>
+  ```
+
+#### 3. 파일 상태 및 작업 관리
+- **상태 확인**:
+  ```bash
+  git status
+  ```
+- **파일 스테이징**:
+  ```bash
+  git add <file_name>
+  git add .
+  ```
+- **변경 사항 보기**:
+  ```bash
+  git diff
+  git diff --staged
+  ```
+
+#### 4. 커밋
+- **커밋 생성**:
+  ```bash
+  git commit -m "Commit message"
+  ```
+- **커밋 메시지 수정**:
+  ```bash
+  git commit --amend -m "New commit message"
+  ```
+
+#### 5. 브랜치
+- **브랜치 생성 및 이동**:
+  ```bash
+  git checkout -b <branch_name>
+  ```
+- **브랜치 목록 확인**:
+  ```bash
+  git branch
+  ```
+- **브랜치 전환**:
+  ```bash
+  git checkout <branch_name>
+  ```
+- **브랜치 삭제**:
+  ```bash
+  git branch -d <branch_name>
+  git branch -D <branch_name>
+  ```
+
+#### 6. 병합 및 충돌 해결
+- **브랜치 병합**:
+  ```bash
+  git merge <branch_name>
+  ```
+- **충돌 해결**:
+  ```bash
+  git add <resolved_file>
+  git commit -m "Resolve merge conflict"
+  ```
+
+#### 7. 원격 저장소
+- **원격 저장소 추가**:
+  ```bash
+  git remote add origin <repository_url>
+  ```
+- **원격 저장소 확인**:
+  ```bash
+  git remote -v
+  ```
+- **변경 사항 가져오기**:
+  ```bash
+  git fetch origin
+  ```
+- **원격 저장소와 동기화**:
+  ```bash
+  git pull origin <branch_name>
+  ```
+- **변경 사항 푸시**:
+  ```bash
+  git push origin <branch_name>
+  ```
+
+#### 8. 되돌리기 및 리셋
+- **파일 되돌리기**:
+  ```bash
+  git checkout -- <file_name>
+  ```
+- **커밋 되돌리기**:
+  ```bash
+  git revert <commit_hash>
+  ```
+- **리셋**:
+  ```bash
+  git reset --soft HEAD^
+  git reset --mixed HEAD^
+  git reset --hard HEAD^
+  ```
+
+#### 9. 기타 유용한 명령어
+- **로그 보기**:
+  ```bash
+  git log
+  git log --oneline
+  ```
+- **태그**:
+  ```bash
+  git tag <tag_name>
+  git push origin <tag_name>
+  git push origin --tags
+  ```
