@@ -86,5 +86,66 @@
 9. **에러 처리**
    - **try-catch 사용**: 오류가 발생할 가능성이 있는 코드 블록에 사용
 
+## Comment: Jaavascript
 
+1. **파일 주석**
+   - 파일의 목적, 작성자, 생성일, 수정 이력을 파일 상단에 기록
+   ```javascript
+   /**
+    * 파일명: example.js
+    * 작성자: 홍길동
+    * 생성일: 2024-06-16
+    * 설명: 이 파일은 사용자 로그인 기능을 포함하고 있습니다.
+    * 수정 이력:
+    *   - 2024-06-17: 비밀번호 암호화 기능 추가 (작성자: 이몽룡)
+    */
+   ```
+
+2. **함수 주석**
+   - 함수의 역할, 매개변수, 반환값 등을 함수 상단에 설명
+   ```javascript
+   /**
+    * 사용자 로그인 함수
+    * @param {string} email - 사용자 이메일
+    * @param {string} password - 사용자 비밀번호
+    * @returns {boolean} - 로그인 성공 여부
+    */
+   function login(email, password) {
+     // 로그인 로직...
+   }
+   ```
+
+3. **블록 주석**
+   - 코드 블록의 목적을 설명하거나 중요한 코드 부분을 자세히 설명
+   ```javascript
+   /**
+    * 사용자 데이터 처리 블록
+    * - 사용자 데이터를 검증하고 데이터베이스에 저장합니다.
+    * - 데이터 검증 실패 시, 오류 메시지를 반환합니다.
+    */
+   try {
+     validateUserData(userData);
+     saveToDatabase(userData);
+   } catch (error) {
+     console.error('데이터 처리 중 오류 발생:', error);
+   }
+   ```
+
+4. **인라인 주석**
+   - 코드 라인 끝에 짧은 설명을 추가하여 특정 코드의 목적을 설명
+   ```javascript
+   const MAX_LIMIT = 100; // 최대 제한 값
+   const count = 0; // 현재 카운트
+   ```
+
+5. **TODO 주석**
+   - 추후에 수정하거나 추가해야 할 작업을 기록
+   ```javascript
+   function fetchData() {
+     // TODO: 에러 처리 로직 추가
+     fetch('/api/data')
+       .then(response => response.json())
+       .then(data => console.log(data));
+   }
+   ```
 
