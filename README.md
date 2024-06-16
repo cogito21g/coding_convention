@@ -312,3 +312,62 @@ Resolves: #456
 3. 적절한 타입 사용 (feat, fix, docs, etc.)
 4. 관련 이슈 번호 포함
 5. 일관성 유지
+
+
+## Git Strategy
+
+#### 1. Git 브랜치 전략
+
+**1.1 Git Flow**
+- **브랜치 종류**: `main`, `develop`, `feature/*`, `release/*`, `hotfix/*`, `bugfix/*`
+- **워크플로우**: 
+  1. `develop`에서 `feature` 브랜치 생성
+  2. `feature` 완료 후 `develop`에 병합
+  3. 릴리스 준비 시 `release` 브랜치 생성
+  4. 릴리스 후 `release`를 `main`과 `develop`에 병합
+  5. 긴급 수정은 `hotfix` 브랜치에서 수행 후 `main`과 `develop`에 병합
+
+**1.2 GitHub Flow**
+- **브랜치 종류**: `main`, 기능 브랜치 (예: `feature/short-description`)
+- **워크플로우**: 
+  1. `main`에서 기능 브랜치 생성
+  2. 기능 개발 완료 후 Pull Request 생성
+  3. 코드 리뷰 및 테스트 후 `main`에 병합
+  4. `main` 브랜치에서 배포
+
+**1.3 GitLab Flow**
+- **브랜치 종류**: `main`, `develop`, 기능 브랜치, 환경 브랜치 (예: `staging`, `production`)
+- **워크플로우**:
+  1. `develop`에서 기능 브랜치 생성
+  2. 기능 완료 후 `develop`에 병합
+  3. `develop`에서 환경 브랜치로 병합 (예: `staging`)
+  4. 환경 브랜치에서 최종 테스트 후 `main`에 병합
+
+#### 2. 커밋 메시지 전략
+
+**규칙:**
+1. **제목 (subject)**: 50자 이내, 대문자로 시작, 마침표 금지
+2. **본문 (body)**: 72자 이내 줄, 한 줄 비워두고 작성, 변경 이유와 주요 변경 사항 설명
+3. **푸터 (footer)**: 관련 이슈 번호나 참고 정보
+
+**타입:**
+- `feat`: 새로운 기능
+- `fix`: 버그 수정
+- `docs`: 문서 수정
+- `style`: 코드 포맷팅
+- `refactor`: 코드 리팩토링
+- `test`: 테스트 추가
+- `chore`: 기타 변경 사항
+
+#### 3. 코드 리뷰 및 병합 전략
+
+**코드 리뷰:**
+- 모든 Pull Request는 적어도 한 명 이상의 리뷰어가 리뷰
+- 코드 리뷰 시 피드백 제공 및 토론
+- 주요 기능 변경 시 팀 전체 논의
+
+**병합 전략:**
+- **Squash and Merge**: 커밋 히스토리를 하나로 합쳐 깔끔하게 유지
+- **Rebase and Merge**: 커밋 히스토리를 재배열하여 깔끔하게 유지, 충돌 해결 필요
+- **Merge Commit**: 모든 커밋을 유지하며 병합, 히스토리가 복잡해질 수 있음
+
