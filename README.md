@@ -9,7 +9,7 @@
 6. [C](#c-language)  
 
    
-## HTML
+## [HTML](./HTML.md)
 
 1. **문서 구조**
    - `<!DOCTYPE html>` 선언
