@@ -6,7 +6,11 @@
 3. [Javascript](#javascript)
 4. [Python](#python)
 5. [C++](#c-plus-plus)   
-6. [C](#c-language)  
+6. [C](#c-language)
+7. [Git](#git)
+8. [Git Commit Message](#git-commit-message)
+9. [Git Strategy](#git-strategy)
+10. [Communication](#communication)
 
    
 ## [HTML](./HTML.md)
