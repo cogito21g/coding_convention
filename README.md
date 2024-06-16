@@ -263,3 +263,52 @@
        }
      }
      ```
+
+
+## Git Commit Message
+
+#### Commit Message 구조
+1. **제목 (subject)**: `<타입>(<범위>): <변경 사항 요약>`
+   - 50자 이내
+   - 대문자로 시작, 마침표 사용 금지
+2. **본문 (body)**: (선택 사항)
+   - 한 줄 비워두고 작성
+   - 한 줄당 72자 이내
+   - 변경 이유와 주요 변경 사항 설명
+3. **푸터 (footer)**: (선택 사항)
+   - 한 줄 비워두고 작성
+   - 관련된 이슈 번호나 참고 정보
+
+#### Commit Message 타입
+- **feat**: 새로운 기능 추가
+- **fix**: 버그 수정
+- **docs**: 문서 수정
+- **style**: 코드 포맷팅, 세미콜론 누락 등 (기능 변화 없음)
+- **refactor**: 코드 리팩토링 (기능 변화 없음)
+- **test**: 테스트 추가 또는 수정
+- **chore**: 빌드 작업, 패키지 매니저 설정 등 (기타 변경 사항)
+
+#### 예시
+**간단한 예시:**
+```
+fix(button): correct typo in class name
+```
+
+**자세한 예시:**
+```
+feat(auth): add JWT authentication
+
+Implemented JSON Web Token (JWT) authentication to enhance security. 
+Users can now log in using their credentials and receive a token for 
+subsequent requests. This update also includes unit tests for the 
+authentication module.
+
+Resolves: #456
+```
+
+#### 작성 규칙
+1. 현재 시제 사용 (예: "Add feature")
+2. 명령형 사용 (예: "Fix bug")
+3. 적절한 타입 사용 (feat, fix, docs, etc.)
+4. 관련 이슈 번호 포함
+5. 일관성 유지
