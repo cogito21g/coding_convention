@@ -326,7 +326,7 @@ Resolves: #456
 5. 일관성 유지
 
 
-## [Git Strategy](./Git_Stategy.md)
+## [Git Strategy](./Git_Strategy.md)
 
 #### 1. Git 브랜치 전략
 
